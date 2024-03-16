@@ -124,12 +124,12 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
+        "Others",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
-        "America",
-        "Others"
+        "America"
       ]
     },
     {
@@ -378,8 +378,8 @@
       "tag":"Others",
       "type":"selector",
       "outbounds":[
-        "{all}",
-        "proxy"
+        "proxy",
+        "{all}"
       ],
       "filter":[
         {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸🇬|SG|sg|新加坡|狮|🇯🇵|JP|jp|日本|日|🇺🇸|US|us|美国|美"]}
