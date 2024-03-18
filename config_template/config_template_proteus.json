@@ -36,6 +36,12 @@
     ],
     "rules": [
       {
+        "domain_suffix": [
+          ".goodyun.buzz"
+        ],
+        "server": "localDns"
+      },
+      {
         "domain": [
           "ghproxy.com",
           "cdn.jsdelivr.net",

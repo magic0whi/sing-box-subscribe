@@ -238,13 +238,13 @@
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.7.outbounds
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.8.outbounds
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.9.outbounds
+0	config_template/config_template_proteus.json	/^        "Others",$/;"	s	array:outbounds.14.outbounds
 0	config_template/config_template_proteus.json	/^        "Others",$/;"	s	array:outbounds.2.outbounds
 0	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.1.outbounds
 0	config_template/config_template_proteus.json	/^        "auto",$/;"	s	array:outbounds.0.outbounds
 0	config_template/config_template_proteus.json	/^        "block",$/;"	s	array:outbounds.18.outbounds
 0	config_template/config_template_proteus.json	/^        "direct",$/;"	s	array:outbounds.12.outbounds
 0	config_template/config_template_proteus.json	/^        "direct",$/;"	s	array:outbounds.13.outbounds
-0	config_template/config_template_proteus.json	/^        "direct",$/;"	s	array:outbounds.14.outbounds
 0	config_template/config_template_proteus.json	/^        "direct",$/;"	s	array:outbounds.16.outbounds
 0	config_template/config_template_proteus.json	/^        "direct",$/;"	s	array:outbounds.17.outbounds
 0	config_template/config_template_proteus.json	/^        "direct",$/;"	s	array:outbounds.6.outbounds
@@ -396,7 +396,6 @@
 1	config_template/config_template_proteus.json	/^          "yacd.metacubex.one",$/;"	s	array:route.rules.6.domain
 1	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.12.outbounds
 1	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.13.outbounds
-1	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.14.outbounds
 1	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.16.outbounds
 1	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.2.outbounds
 1	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.6.outbounds
@@ -412,6 +411,7 @@
 1	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.9.outbounds
 1	config_template/config_template_proteus.json	/^        "direct"$/;"	s	array:outbounds.18.outbounds
 1	config_template/config_template_proteus.json	/^        "direct",$/;"	s	array:outbounds.0.outbounds
+1	config_template/config_template_proteus.json	/^        "direct",$/;"	s	array:outbounds.14.outbounds
 1	config_template/config_template_proteus.json	/^        "proxy"$/;"	s	array:outbounds.17.outbounds
 1	config_template/config_template_proteus.json	/^        "proxy"$/;"	s	array:outbounds.19.outbounds
 1	config_template/config_template_proteus.json	/^        "proxy"$/;"	s	array:outbounds.20.outbounds
@@ -630,6 +630,7 @@
 2	config_template/config_template_no_groups_tun_VN.json	/^    {$/;"	o	array:outbounds
 2	config_template/config_template_proteus.json	/^          "testingcf.jsdelivr.net"$/;"	s	array:dns.rules.0.domain
 2	config_template/config_template_proteus.json	/^          "yacd.haishan.me",$/;"	s	array:route.rules.6.domain
+2	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.14.outbounds
 2	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.1.outbounds
 2	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.10.outbounds
 2	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.11.outbounds
@@ -643,7 +644,6 @@
 2	config_template/config_template_proteus.json	/^        "TaiWan"$/;"	s	array:outbounds.6.outbounds
 2	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.12.outbounds
 2	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.13.outbounds
-2	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.14.outbounds
 2	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.16.outbounds
 2	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.2.outbounds
 2	config_template/config_template_proteus.json	/^        "{all}"$/;"	s	array:outbounds.0.outbounds
@@ -852,9 +852,9 @@
 3	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.9.outbounds
 3	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.12.outbounds
 3	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.13.outbounds
-3	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.14.outbounds
 3	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.16.outbounds
 3	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.2.outbounds
+3	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.14.outbounds
 3	config_template/config_template_proteus.json	/^      {$/;"	o	array:dns.rules
 3	config_template/config_template_proteus.json	/^      {$/;"	o	array:route.rule_set
 3	config_template/config_template_proteus.json	/^      {$/;"	o	array:route.rules
@@ -966,10 +966,10 @@
 4	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.8.outbounds
 4	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.12.outbounds
 4	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.13.outbounds
-4	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.14.outbounds
 4	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.16.outbounds
 4	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.2.outbounds
 4	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.1.outbounds
+4	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.14.outbounds
 4	config_template/config_template_proteus.json	/^      {$/;"	o	array:dns.rules
 4	config_template/config_template_proteus.json	/^      {$/;"	o	array:route.rule_set
 4	config_template/config_template_proteus.json	/^      {$/;"	o	array:route.rules
@@ -1029,8 +1029,8 @@
 5	config_template/config_template_proteus.json	/^        "America"$/;"	s	array:outbounds.2.outbounds
 5	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.12.outbounds
 5	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.13.outbounds
-5	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.14.outbounds
 5	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.16.outbounds
+5	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.14.outbounds
 5	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.10.outbounds
 5	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.11.outbounds
 5	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.15.outbounds
@@ -1067,9 +1067,9 @@
 6	config_template/config_template_groups_v6_rule_set_tun.json	/^      {$/;"	o	array:route.rule_set
 6	config_template/config_template_groups_v6_rule_set_tun.json	/^      {$/;"	o	array:route.rules
 6	config_template/config_template_groups_v6_rule_set_tun.json	/^    {$/;"	o	array:outbounds
+6	config_template/config_template_proteus.json	/^        "America"$/;"	s	array:outbounds.14.outbounds
 6	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.12.outbounds
 6	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.13.outbounds
-6	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.14.outbounds
 6	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.16.outbounds
 6	config_template/config_template_proteus.json	/^      {$/;"	o	array:dns.rules
 6	config_template/config_template_proteus.json	/^      {$/;"	o	array:route.rule_set
