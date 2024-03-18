@@ -268,13 +268,13 @@
       "tag":"Games",
       "type":"selector",
       "outbounds":[
+        "Others",
         "direct",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
-        "America",
-        "Others"
+        "America"
       ]
     },
     {

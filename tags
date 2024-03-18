@@ -232,13 +232,13 @@
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.10.outbounds
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.11.outbounds
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.15.outbounds
-0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.2.outbounds
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.3.outbounds
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.4.outbounds
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.5.outbounds
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.7.outbounds
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.8.outbounds
 0	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.9.outbounds
+0	config_template/config_template_proteus.json	/^        "Others",$/;"	s	array:outbounds.2.outbounds
 0	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.1.outbounds
 0	config_template/config_template_proteus.json	/^        "auto",$/;"	s	array:outbounds.0.outbounds
 0	config_template/config_template_proteus.json	/^        "block",$/;"	s	array:outbounds.18.outbounds
@@ -248,6 +248,7 @@
 0	config_template/config_template_proteus.json	/^        "direct",$/;"	s	array:outbounds.16.outbounds
 0	config_template/config_template_proteus.json	/^        "direct",$/;"	s	array:outbounds.17.outbounds
 0	config_template/config_template_proteus.json	/^        "direct",$/;"	s	array:outbounds.6.outbounds
+0	config_template/config_template_proteus.json	/^        "proxy",$/;"	s	array:outbounds.24.outbounds
 0	config_template/config_template_proteus.json	/^        "rule_set":["geosite-facebook","geosite-instagram"],$/;"	s	array:route.rules.17.rule_set
 0	config_template/config_template_proteus.json	/^        "{all}"$/;"	s	array:outbounds.25.outbounds
 0	config_template/config_template_proteus.json	/^        "{all}",$/;"	s	array:outbounds.19.outbounds
@@ -255,7 +256,6 @@
 0	config_template/config_template_proteus.json	/^        "{all}",$/;"	s	array:outbounds.21.outbounds
 0	config_template/config_template_proteus.json	/^        "{all}",$/;"	s	array:outbounds.22.outbounds
 0	config_template/config_template_proteus.json	/^        "{all}",$/;"	s	array:outbounds.23.outbounds
-0	config_template/config_template_proteus.json	/^        "{all}",$/;"	s	array:outbounds.24.outbounds
 0	config_template/config_template_proteus.json	/^        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}$/;"	o	array:outbounds.25.filter
 0	config_template/config_template_proteus.json	/^        {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效"]}$/;"	s	array:outbounds.25.filter.0.keywords
 0	config_template/config_template_proteus.json	/^        {"action":"exclude","keywords":["🇭🇰|HK|hk|香港|香|🇹🇼|TW|tw|台湾|台|🇸/;"	o	array:outbounds.24.filter
@@ -398,12 +398,12 @@
 1	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.13.outbounds
 1	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.14.outbounds
 1	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.16.outbounds
+1	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.2.outbounds
 1	config_template/config_template_proteus.json	/^        "HongKong",$/;"	s	array:outbounds.6.outbounds
 1	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.1.outbounds
 1	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.10.outbounds
 1	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.11.outbounds
 1	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.15.outbounds
-1	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.2.outbounds
 1	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.3.outbounds
 1	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.4.outbounds
 1	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.5.outbounds
@@ -418,8 +418,8 @@
 1	config_template/config_template_proteus.json	/^        "proxy"$/;"	s	array:outbounds.21.outbounds
 1	config_template/config_template_proteus.json	/^        "proxy"$/;"	s	array:outbounds.22.outbounds
 1	config_template/config_template_proteus.json	/^        "proxy"$/;"	s	array:outbounds.23.outbounds
-1	config_template/config_template_proteus.json	/^        "proxy"$/;"	s	array:outbounds.24.outbounds
 1	config_template/config_template_proteus.json	/^        "rule_set":["geosite-facebook","geosite-instagram"],$/;"	s	array:route.rules.17.rule_set
+1	config_template/config_template_proteus.json	/^        "{all}"$/;"	s	array:outbounds.24.outbounds
 1	config_template/config_template_proteus.json	/^      {$/;"	o	array:dns.rules
 1	config_template/config_template_proteus.json	/^      {$/;"	o	array:dns.servers
 1	config_template/config_template_proteus.json	/^      {$/;"	o	array:route.rule_set
@@ -634,7 +634,6 @@
 2	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.10.outbounds
 2	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.11.outbounds
 2	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.15.outbounds
-2	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.2.outbounds
 2	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.3.outbounds
 2	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.4.outbounds
 2	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.5.outbounds
@@ -646,6 +645,7 @@
 2	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.13.outbounds
 2	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.14.outbounds
 2	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.16.outbounds
+2	config_template/config_template_proteus.json	/^        "TaiWan",$/;"	s	array:outbounds.2.outbounds
 2	config_template/config_template_proteus.json	/^        "{all}"$/;"	s	array:outbounds.0.outbounds
 2	config_template/config_template_proteus.json	/^      {$/;"	o	array:dns.rules
 2	config_template/config_template_proteus.json	/^      {$/;"	o	array:dns.servers
@@ -844,7 +844,6 @@
 3	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.10.outbounds
 3	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.11.outbounds
 3	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.15.outbounds
-3	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.2.outbounds
 3	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.3.outbounds
 3	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.4.outbounds
 3	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.5.outbounds
@@ -855,6 +854,7 @@
 3	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.13.outbounds
 3	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.14.outbounds
 3	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.16.outbounds
+3	config_template/config_template_proteus.json	/^        "Singapore",$/;"	s	array:outbounds.2.outbounds
 3	config_template/config_template_proteus.json	/^      {$/;"	o	array:dns.rules
 3	config_template/config_template_proteus.json	/^      {$/;"	o	array:route.rule_set
 3	config_template/config_template_proteus.json	/^      {$/;"	o	array:route.rules
@@ -959,7 +959,6 @@
 4	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.10.outbounds
 4	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.11.outbounds
 4	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.15.outbounds
-4	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.2.outbounds
 4	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.3.outbounds
 4	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.4.outbounds
 4	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.5.outbounds
@@ -969,6 +968,7 @@
 4	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.13.outbounds
 4	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.14.outbounds
 4	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.16.outbounds
+4	config_template/config_template_proteus.json	/^        "Japan",$/;"	s	array:outbounds.2.outbounds
 4	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.1.outbounds
 4	config_template/config_template_proteus.json	/^      {$/;"	o	array:dns.rules
 4	config_template/config_template_proteus.json	/^      {$/;"	o	array:route.rule_set
@@ -1026,6 +1026,7 @@
 5	config_template/config_template_groups_v6_rule_set_tun.json	/^      {$/;"	o	array:route.rules
 5	config_template/config_template_groups_v6_rule_set_tun.json	/^    {$/;"	o	array:outbounds
 5	config_template/config_template_no_groups_tun_VN.json	/^      {$/;"	o	array:route.rules
+5	config_template/config_template_proteus.json	/^        "America"$/;"	s	array:outbounds.2.outbounds
 5	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.12.outbounds
 5	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.13.outbounds
 5	config_template/config_template_proteus.json	/^        "America",$/;"	s	array:outbounds.14.outbounds
@@ -1033,7 +1034,6 @@
 5	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.10.outbounds
 5	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.11.outbounds
 5	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.15.outbounds
-5	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.2.outbounds
 5	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.3.outbounds
 5	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.4.outbounds
 5	config_template/config_template_proteus.json	/^        "Others"$/;"	s	array:outbounds.5.outbounds
@@ -1409,38 +1409,38 @@ download_detour	config_template/config_template_groups_v6_rule_set_tun.json	/^  
 download_detour	config_template/config_template_groups_v6_rule_set_tun.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.8
 download_detour	config_template/config_template_groups_v6_rule_set_tun.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.9
 download_detour	config_template/config_template_no_groups_tun_VN.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.0
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.0
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.1
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.10
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.11
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.12
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.13
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.14
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.15
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.16
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.17
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.18
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.19
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.2
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.20
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.21
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.22
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.23
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.24
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.25
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.26
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.27
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.28
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.29
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.3
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.30
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.31
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.4
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.5
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.6
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.7
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.8
-download_detour	config_template/config_template_proteus.json	/^        "download_detour": "direct"$/;"	s	object:route.rule_set.9
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.0
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.1
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.10
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.11
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.12
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.13
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.14
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.15
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.16
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.17
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.18
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.19
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.2
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.20
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.21
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.22
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.23
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.24
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.25
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.26
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.27
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.28
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.29
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.3
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.30
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.31
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.4
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.5
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.6
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.7
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.8
+download_detour	config_template/config_template_proteus.json	/^        "download_detour": "proxy"$/;"	s	object:route.rule_set.9
 edit_temp_json	api/app.py	/^def edit_temp_json():$/;"	f
 emoji	providers.json	/^            "emoji": 0,$/;"	n	object:subscribes.1
 emoji	providers.json	/^            "emoji": 1,$/;"	n	object:subscribes.0
