@@ -54,11 +54,6 @@
         "server": "block"
       },
       {
-        "outbound": "any",
-        "server": "localDns",
-        "disable_cache": true
-      },
-      {
         "rule_set": "geosite-cn",
         "server": "localDns"
       },   
