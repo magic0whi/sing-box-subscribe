@@ -78,11 +78,17 @@
       "type": "tun",
       "inet4_address": "172.19.0.1/30",
       "mtu": 9000,
+      "gso": true,
       "auto_route": true,
       "strict_route": true,
       "sniff": true,
       "endpoint_independent_nat": false,
       "stack": "system",
+      "exclude_interface": [
+        "docker",
+        "optun",
+        "yggdrasil"
+      ],
       "platform": {
         "http_proxy": {
           "enabled": true,
@@ -430,6 +436,10 @@
         "outbound": "block"
       },
       {
+        "protocol": "stun",
+        "outbound": "direct"
+      },
+      {
         "rule_set": "geosite-category-ads-all",
         "outbound": "AdBlock"
       },
@@ -440,6 +450,13 @@
       {
         "clash_mode": "global",
         "outbound": "proxy"
+      },
+      {
+        "process_name": [
+          "yggdrasil",
+          "openp2p"
+        ],
+        "outbound": "direct"
       },
       {
         "domain": [
