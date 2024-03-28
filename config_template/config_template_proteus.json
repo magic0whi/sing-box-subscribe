@@ -454,7 +454,8 @@
       {
         "process_name": [
           "yggdrasil",
-          "openp2p"
+          "openp2p",
+          "aria2c"
         ],
         "outbound": "direct"
       },
