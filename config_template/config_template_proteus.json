@@ -50,10 +50,6 @@
         "server": "localDns"
       },
       {
-        "rule_set": "geosite-category-ads-all",
-        "server": "block"
-      },
-      {
         "rule_set": "geosite-cn",
         "server": "localDns"
       },   
@@ -68,6 +64,10 @@
       {
         "rule_set": "geosite-geolocation-!cn",
         "server": "proxyDns"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "server": "block"
       }
     ],
     "final": "localDns",
@@ -462,7 +462,6 @@
       {
         "domain": [
           "clash.razord.top",
-          "yacd.metacubex.one",
           "yacd.haishan.me",
           "d.metacubex.one"
         ],
