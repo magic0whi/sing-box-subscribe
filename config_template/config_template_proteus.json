@@ -37,7 +37,9 @@
     "rules": [
       {
         "domain_suffix": [
-          ".goodyun.buzz"
+          ".goodyun.buzz",
+          ".0626.lol",
+          ".fs123.top"
         ],
         "server": "localDns"
       },
