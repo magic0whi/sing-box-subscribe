@@ -453,9 +453,10 @@
       },
       {
         "process_name": [
+          "aria2c",
           "yggdrasil",
           "openp2p",
-          "aria2c"
+          "syncthing"
         ],
         "outbound": "direct"
       },
