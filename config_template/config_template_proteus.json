@@ -1,6 +1,6 @@
 {
   "log": {
-    "level": "info",
+    "level": "warn",
     "timestamp": true
   },
   "experimental": {
@@ -20,12 +20,17 @@
   "dns": {
     "servers": [
       {
-        "tag": "proxyDns",
+        "tag": "dhcpDNS",
+        "address": "dhcp://auto",
+        "detour": "direct"
+      },
+      {
+        "tag": "proxyDNS",
         "address": "tls://8.8.8.8",
         "detour": "proxy"
       },
       {
-        "tag": "localDns",
+        "tag": "localDNS",
         "address": "tls://223.5.5.5",
         "detour": "direct"
       },
@@ -36,12 +41,19 @@
     ],
     "rules": [
       {
+        "domain": [
+          "captive.apple.com",
+          "detectportal.firefox.com"
+        ],
+        "server": "dhcpDNS"
+      },
+      {
         "domain_suffix": [
           ".goodyun.buzz",
           ".0626.lol",
           ".fs123.top"
         ],
-        "server": "localDns"
+        "server": "localDNS"
       },
       {
         "domain": [
@@ -49,30 +61,35 @@
           "cdn.jsdelivr.net",
           "testingcf.jsdelivr.net"
         ],
-        "server": "localDns"
+        "server": "localDNS"
+      },
+      {
+        "outbound": "any",
+        "server": "localDNS",
+        "disable_cache": true
       },
       {
         "rule_set": "geosite-cn",
-        "server": "localDns"
+        "server": "localDNS"
       },
       {
         "clash_mode": "direct",
-        "server": "localDns"
+        "server": "localDNS"
       },
       {
         "clash_mode": "global",
-        "server": "proxyDns"
+        "server": "proxyDNS"
       },
       {
         "rule_set": "geosite-geolocation-!cn",
-        "server": "proxyDns"
+        "server": "proxyDNS"
       },
       {
         "rule_set": "geosite-category-ads-all",
         "server": "block"
       }
     ],
-    "final": "proxyDns",
+    "final": "localDNS",
     "strategy": "prefer_ipv4"
   },
   "inbounds": [
@@ -83,7 +100,7 @@
       "mtu": 9000,
       "gso": true,
       "auto_route": true,
-      "strict_route": true,
+      "strict_route": false,
       "sniff": true,
       "endpoint_independent_nat": false,
       "stack": "system",
@@ -134,12 +151,12 @@
       "tag": "Google",
       "type": "selector",
       "outbounds": [
-        "Others",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
-        "America"
+        "America",
+        "Others"
       ]
     },
     {
@@ -191,14 +208,9 @@
       "tag": "Bahamut",
       "type": "selector",
       "outbounds": [
-        "HongKong",
         "TaiWan",
-        "Singapore",
-        "Japan",
-        "America",
         "Others"
-      ],
-      "default": "TaiWan"
+      ]
     },
     {
       "tag": "Spotify",
@@ -210,7 +222,8 @@
         "Japan",
         "America",
         "Others"
-      ]
+      ],
+      "default": "America"
     },
     {
       "tag": "TikTok",
@@ -222,7 +235,7 @@
         "Japan",
         "America"
       ],
-      "default": "Singapore"
+      "default": "Japan"
     },
     {
       "tag": "NETFLIX",
@@ -303,15 +316,14 @@
       "tag": "Global",
       "type": "selector",
       "outbounds": [
-        "direct",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "Others"
-      ],
-      "default": "HongKong"
+        "Others",
+        "direct"
+      ]
     },
     {
       "tag": "China",
@@ -333,8 +345,7 @@
       "tag": "HongKong",
       "type": "selector",
       "outbounds": [
-        "{all}",
-        "proxy"
+        "{all}"
       ],
       "filter": [
         {
@@ -349,8 +360,7 @@
       "tag": "TaiWan",
       "type": "selector",
       "outbounds": [
-        "{all}",
-        "proxy"
+        "{all}"
       ],
       "filter": [
         {
@@ -365,8 +375,7 @@
       "tag": "Singapore",
       "type": "selector",
       "outbounds": [
-        "{all}",
-        "proxy"
+        "{all}"
       ],
       "filter": [
         {
@@ -381,8 +390,7 @@
       "tag": "Japan",
       "type": "selector",
       "outbounds": [
-        "{all}",
-        "proxy"
+        "{all}"
       ],
       "filter": [
         {
@@ -397,8 +405,7 @@
       "tag": "America",
       "type": "selector",
       "outbounds": [
-        "{all}",
-        "proxy"
+        "{all}"
       ],
       "filter": [
         {
@@ -413,7 +420,6 @@
       "tag": "Others",
       "type": "selector",
       "outbounds": [
-        "proxy",
         "{all}"
       ],
       "filter": [
@@ -461,17 +467,17 @@
     "final": "proxy",
     "rules": [
       {
-        "protocol": "dns",
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 53
+          },
+          {
+            "protocol": "dns"
+          }
+        ],
         "outbound": "dns-out"
-      },
-      {
-        "port": 53,
-        "outbound": "dns-out"
-      },
-      {
-        "network": "udp",
-        "port": 443,
-        "outbound": "block"
       },
       {
         "protocol": "stun",
@@ -501,9 +507,9 @@
       {
         "domain": [
           "clash.razord.top",
+          "yacd.metacubex.one",
           "yacd.haishan.me",
-          "d.metacubex.one",
-          "github.com"
+          "d.metacubex.one"
         ],
         "outbound": "direct"
       },
@@ -512,54 +518,40 @@
         "outbound": "OpenAI"
       },
       {
-        "rule_set": "geosite-youtube",
+        "rule_set": [
+          "geosite-youtube",
+          "geoip-google",
+          "geosite-google",
+          "geosite-github"
+        ],
         "outbound": "Google"
-      },
-      {
-        "rule_set": "geoip-google",
-        "outbound": "Google"
-      },
-      {
-        "rule_set": "geosite-google",
-        "outbound": "Google"
-      },
-      {
-        "rule_set": "geosite-github",
-        "outbound": "Google"
-      },
-      {
-        "rule_set": "geoip-telegram",
-        "outbound": "Telegram"
-      },
-      {
-        "rule_set": "geosite-telegram",
-        "outbound": "Telegram"
-      },
-      {
-        "rule_set": "geoip-twitter",
-        "outbound": "Twitter"
-      },
-      {
-        "rule_set": "geosite-twitter",
-        "outbound": "Twitter"
-      },
-      {
-        "rule_set": "geoip-facebook",
-        "outbound": "Facebook"
       },
       {
         "rule_set": [
-          "geosite-facebook",
-          "geosite-instagram"
+          "geoip-telegram",
+          "geosite-telegram"
+        ],
+        "outbound": "Telegram"
+      },
+      {
+        "rule_set": [
+          "geoip-twitter",
+          "geosite-twitter"
+        ],
+        "outbound": "Twitter"
+      },
+      {
+        "rule_set": [
+          "geoip-facebook",
+          "geosite-facebook"
         ],
         "outbound": "Facebook"
       },
       {
-        "rule_set": "geoip-bilibili",
-        "outbound": "BiliBili"
-      },
-      {
-        "rule_set": "geosite-bilibili",
+        "rule_set": [
+          "geoip-bilibili",
+          "geosite-bilibili"
+        ],
         "outbound": "BiliBili"
       },
       {
@@ -575,11 +567,10 @@
         "outbound": "TikTok"
       },
       {
-        "rule_set": "geoip-netflix",
-        "outbound": "NETFLIX"
-      },
-      {
-        "rule_set": "geosite-netflix",
+        "rule_set": [
+          "geoip-netflix",
+          "geosite-netflix"
+        ],
         "outbound": "NETFLIX"
       },
       {
@@ -587,11 +578,11 @@
         "outbound": "Disney+"
       },
       {
-        "rule_set": "geosite-apple",
-        "outbound": "Apple"
-      },
-      {
-        "rule_set": "geosite-amazon",
+        "rule_set": [
+          "geoip-apple",
+          "geosite-apple",
+          "geosite-amazon"
+        ],
         "outbound": "Apple"
       },
       {
@@ -603,11 +594,10 @@
         "outbound": "Games"
       },
       {
-        "rule_set": "geosite-hbo",
-        "outbound": "Streaming"
-      },
-      {
-        "rule_set": "geosite-primevideo",
+        "rule_set": [
+          "geosite-hbo",
+          "geosite-primevideo"
+        ],
         "outbound": "Streaming"
       },
       {
@@ -623,11 +613,10 @@
         "outbound": "direct"
       },
       {
-        "rule_set": "geoip-cn",
-        "outbound": "China"
-      },
-      {
-        "rule_set": "geosite-cn",
+        "rule_set": [
+          "geoip-cn",
+          "geosite-cn"
+        ],
         "outbound": "China"
       }
     ],
@@ -742,13 +731,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/facebook.srs",
-        "download_detour": "proxy"
-      },
-      {
-        "tag": "geosite-instagram",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/instagram.srs",
         "download_detour": "proxy"
       },
       {
