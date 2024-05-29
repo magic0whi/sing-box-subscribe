@@ -42,26 +42,21 @@
     "rules": [
       {
         "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net",
           "captive.apple.com",
-          "detectportal.firefox.com"
+          "detectportal.firefox.com",
+          "securelogin.arubanetworks.com",
+          "w0f.cn"
         ],
-        "server": "dhcpDNS"
-      },
-      {
         "domain_suffix": [
           ".goodyun.buzz",
           ".0626.lol",
-          ".fs123.top"
+          ".fs123.top",
+          ".exands.com"
         ],
-        "server": "localDNS"
-      },
-      {
-        "domain": [
-          "ghproxy.com",
-          "cdn.jsdelivr.net",
-          "testingcf.jsdelivr.net"
-        ],
-        "server": "localDNS"
+        "server": "dhcpDNS"
       },
       {
         "outbound": "any",
@@ -509,8 +504,17 @@
           "clash.razord.top",
           "yacd.metacubex.one",
           "yacd.haishan.me",
-          "d.metacubex.one"
+          "d.metacubex.one",
+          "captive.apple.com",
+          "detectportal.firefox.com",
+          "w0f.cn",
+          "securelogin.arubanetworks.com"
         ],
+        "domain_suffix": [
+          ".exands.com"
+        ],
+        "rule_set": "geosite-private",
+        "ip_is_private": true,
         "outbound": "direct"
       },
       {
@@ -603,14 +607,6 @@
       {
         "rule_set": "geosite-geolocation-!cn",
         "outbound": "Global"
-      },
-      {
-        "rule_set": "geosite-private",
-        "outbound": "direct"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "direct"
       },
       {
         "rule_set": [
