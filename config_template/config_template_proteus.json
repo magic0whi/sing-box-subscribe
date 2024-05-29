@@ -514,6 +514,9 @@
           ".exands.com"
         ],
         "rule_set": "geosite-private",
+        "ip_cidr": [
+          "20.248.137.48"
+        ],
         "ip_is_private": true,
         "outbound": "direct"
       },
