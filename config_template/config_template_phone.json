@@ -488,9 +488,12 @@
       {
         "process_name": [
           "aria2c",
-          "yggdrasil",
+          "i2pd",
+          "monerod",
           "openp2p",
-          "syncthing"
+          "syncthing",
+          "tor",
+          "yggdrasil"
         ],
         "outbound": "direct"
       },
