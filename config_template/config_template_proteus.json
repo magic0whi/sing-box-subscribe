@@ -48,22 +48,15 @@
           "testingcf.jsdelivr.net",
           "captive.apple.com",
           "detectportal.firefox.com",
-          "securelogin.arubanetworks.com",
-          "w0f.cn"
+          "w0f.cn",
+          "securelogin.arubanetworks.com"
         ],
         "domain_suffix": [
-          ".goodyun.buzz",
-          ".0626.lol",
-          ".fs123.top",
           ".exands.com"
         ],
-        "server": "dhcpDNS",
-        "disable_cache": true
-      },
-      {
         "outbound": "any",
-        "server": "localDNS",
-        "disable_cache": true
+        "disable_cache": true,
+        "server": "dhcpDNS"
       },
       {
         "rule_set": "geosite-cn",
@@ -477,53 +470,50 @@
         "outbound": "dns-out"
       },
       {
-        "protocol": "stun",
-        "outbound": "direct"
-      },
-      {
         "rule_set": "geosite-category-ads-all",
         "outbound": "AdBlock"
-      },
-      {
-        "clash_mode": "direct",
-        "outbound": "direct"
       },
       {
         "clash_mode": "global",
         "outbound": "proxy"
       },
       {
-        "process_name": [
-          "aria2c",
-          "i2pd",
-          "monerod",
-          "openp2p",
-          "syncthing",
-          "tor",
-          "yggdrasil"
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "domain": [
+              "captive.apple.com",
+              "detectportal.firefox.com",
+              "w0f.cn",
+              "securelogin.arubanetworks.com"
+            ],
+            "domain_suffix": [
+              ".exands.com",
+              ".hcaptcha.com"
+            ],
+            "rule_set": "geosite-private",
+            "ip_is_private": true,
+            "clash_mode": "direct"
+          },
+          {
+            "process_name": [
+              "aria2c",
+              "i2pd",
+              "monerod",
+              "openp2p",
+              "syncthing",
+              "tor",
+              "yggdrasil"
+            ]
+          },
+          {
+            "port": 22
+          },
+          {
+            "protocol": "stun"
+          }
         ],
-        "outbound": "direct"
-      },
-      {
-        "domain": [
-          "clash.razord.top",
-          "yacd.metacubex.one",
-          "yacd.haishan.me",
-          "d.metacubex.one",
-          "captive.apple.com",
-          "detectportal.firefox.com",
-          "w0f.cn",
-          "securelogin.arubanetworks.com"
-        ],
-        "domain_suffix": [
-          ".exands.com",
-          ".hcaptcha.com"
-        ],
-        "rule_set": "geosite-private",
-        "ip_cidr": [
-          "20.248.137.48"
-        ],
-        "ip_is_private": true,
         "outbound": "direct"
       },
       {
