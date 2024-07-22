@@ -1,8 +1,7 @@
 {
   "log": {
-    "level": "info",
-    "timestamp": true,
-    "output": "/tmp/sing-box.log"
+    "level": "warn",
+    "timestamp": true
   },
   "experimental": {
     "clash_api": {
