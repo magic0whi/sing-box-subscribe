@@ -97,6 +97,7 @@
       "exclude_interface": [
         "docker",
         "optun",
+        "tailscale0",
         "yggdrasil"
       ],
       "platform": {
@@ -499,10 +500,12 @@
           {
             "process_name": [
               "aria2c",
+              "cifsd",
               "i2pd",
               "monerod",
-              "openp2p",
+              "smbd",
               "syncthing",
+              "tailscaled",
               "tor",
               "yggdrasil"
             ]
