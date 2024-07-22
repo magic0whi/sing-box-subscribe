@@ -20,11 +20,6 @@
   "dns": {
     "servers": [
       {
-        "tag": "dhcpDNS",
-        "address": "dhcp://auto",
-        "detour": "direct"
-      },
-      {
         "tag": "proxyDNS",
         "address": "tls://8.8.8.8",
         "detour": "proxy"
@@ -55,7 +50,7 @@
         ],
         "outbound": "any",
         "disable_cache": true,
-        "server": "dhcpDNS"
+        "server": "localDNS"
       },
       {
         "rule_set": "geosite-cn",
