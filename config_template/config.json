@@ -8,7 +8,7 @@
       "external_controller": "127.0.0.1:9091",
       "external_ui": "ui",
       "secret": "",
-      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+      "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/metacubexd/archive/gh-pages.tar.gz",
       "external_ui_download_detour": "direct",
       "default_mode": "rule"
     },
@@ -63,7 +63,8 @@
         "domain_keyword": [
           "stun",
           "relay",
-          "tailscale"
+          "tailscale",
+          "cloudflare"
         ]
       },
       {
@@ -132,8 +133,17 @@
       "outbounds": [
         "auto",
         "direct",
+        "warp",
         "{all}"
       ]
+    },
+    {
+      "type": "socks",
+      "tag": "warp",
+      "server": "127.0.0.1",
+      "server_port": 40000,
+      "version": "5",
+      "network": "tcp"
     },
     {
       "tag": "OpenAI",
@@ -504,13 +514,19 @@
             "clash_mode": "direct"
           },
           {
-            "port": 22
+            "port": [
+              22,
+              40000
+            ]
           },
           {
             "protocol": "stun"
           },
           {
             "process_name": [
+              "warp-svc",
+              "warp-taskbar",
+              "warp",
               "aria2c",
               "cifsd",
               "i2pd",
