@@ -120,13 +120,21 @@
     },
     {
       "type": "mixed",
-      "listen": "127.0.0.1",
+      "listen": "0.0.0.0",
       "listen_port": 2080,
       "sniff": true,
       "users": []
     }
   ],
   "outbounds": [
+    {
+      "type": "socks",
+      "tag": "warp",
+      "server": "127.0.0.1",
+      "server_port": 40000,
+      "version": "5",
+      "network": "tcp"
+    },
     {
       "tag": "Proxy",
       "type": "selector",
@@ -430,6 +438,8 @@
       "tag": "Others",
       "type": "selector",
       "outbounds": [
+        "Proxy",
+        "direct",
         "{all}"
       ],
       "filter": [
@@ -525,7 +535,13 @@
           {
             "process_name": [
               "warp-svc",
+              "warp-svc.exe",
               "warp-taskbar",
+              "warp-cli",
+              "warp-cli.exe",
+              "warp-dex",
+              "warp-dex.exe",
+              "Cloudflare WARP.exe",
               "warp",
               "aria2c",
               "cifsd",
@@ -534,7 +550,9 @@
               "smbd",
               "syncthing",
               "tailscaled",
-              "tor"
+              "tailscaled.exe",
+              "tor",
+              "tor.exe"
             ]
           }
         ]
