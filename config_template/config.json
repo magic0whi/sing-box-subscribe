@@ -1,7 +1,7 @@
 {
   "log": {
-    "level": "info",
-    "timestamp": true
+    "level": "error",
+    "timestamp": false
   },
   "experimental": {
     "clash_api": {
@@ -14,13 +14,13 @@
     },
     "cache_file": {
       "enabled": true,
-      "store_fakeip": true,
-      "store_rdrc": true
+      "store_fakeip": false,
+      "store_rdrc": false
     }
   },
   "dns": {
     "fakeip": {
-      "enabled": true,
+      "enabled": false,
       "inet4_range": "198.18.0.0/15",
       "inet6_range": "fc00::/18"
     },
@@ -28,10 +28,6 @@
       {
         "tag": "block",
         "address": "rcode://success"
-      },
-      {
-        "tag": "fakeip",
-        "address": "fakeip"
       },
       {
         "tag": "proxyDNS",
@@ -59,24 +55,24 @@
           "ghproxy.com",
           "cdn.jsdelivr.net",
           "testingcf.jsdelivr.net"
-        ],
-        "domain_keyword": [
-          "stun",
-          "relay",
-          "tailscale",
-          "cloudflare"
+        ]
+      },
+      {
+        "server": "localDNS",
+        "process_name": [
+          "warp-svc",
+          "warp-svc.exe",
+          "warp-taskbar",
+          "warp-cli",
+          "warp-cli.exe",
+          "warp-dex",
+          "warp-dex.exe",
+          "Cloudflare WARP.exe"
         ]
       },
       {
         "server": "localDNS",
         "clash_mode": "direct"
-      },
-      {
-        "server": "fakeip",
-        "query_type": [
-          "A",
-          "AAAA"
-        ]
       },
       {
         "server": "localDNS",
@@ -91,7 +87,7 @@
         "rule_set": "geosite-geolocation-!cn"
       }
     ],
-    "independent_cache": true,
+    "independent_cache": false,
     "final": "localDNS",
     "strategy": "prefer_ipv6"
   },
@@ -128,26 +124,18 @@
   ],
   "outbounds": [
     {
-      "type": "socks",
-      "tag": "warp",
-      "server": "127.0.0.1",
-      "server_port": 40000,
-      "version": "5",
-      "network": "tcp"
-    },
-    {
       "tag": "Proxy",
       "type": "selector",
       "outbounds": [
         "auto",
         "direct",
-        "warp",
+        "WARP",
         "{all}"
       ]
     },
     {
       "type": "socks",
-      "tag": "warp",
+      "tag": "WARP",
       "server": "127.0.0.1",
       "server_port": 40000,
       "version": "5",
@@ -227,7 +215,7 @@
       "type": "selector",
       "outbounds": [
         "TaiWan",
-        "Proxy"
+        "Others"
       ]
     },
     {
@@ -511,50 +499,48 @@
       },
       {
         "outbound": "direct",
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "rule_set": "geosite-private"
-          },
-          {
-            "ip_is_private": true
-          },
-          {
-            "clash_mode": "direct"
-          },
-          {
-            "port": [
-              22,
-              40000
-            ]
-          },
-          {
-            "protocol": "stun"
-          },
-          {
-            "process_name": [
-              "warp-svc",
-              "warp-svc.exe",
-              "warp-taskbar",
-              "warp-cli",
-              "warp-cli.exe",
-              "warp-dex",
-              "warp-dex.exe",
-              "Cloudflare WARP.exe",
-              "warp",
-              "aria2c",
-              "cifsd",
-              "i2pd",
-              "monerod",
-              "smbd",
-              "syncthing",
-              "tailscaled",
-              "tailscaled.exe",
-              "tor",
-              "tor.exe"
-            ]
-          }
+        "clash_mode": "direct"
+      },
+      {
+        "outbound": "direct",
+        "rule_set": "geosite-private"
+      },
+      {
+        "outbound": "direct",
+        "ip_is_private": true
+      },
+      {
+        "outbound": "direct",
+        "protocol": "stun"
+      },
+      {
+        "outbound": "direct",
+        "port": [
+          22,
+          40000
+        ]
+      },
+      {
+        "outbound": "direct",
+        "process_name": [
+          "warp-svc",
+          "warp-svc.exe",
+          "warp-taskbar",
+          "warp-cli",
+          "warp-cli.exe",
+          "warp-dex",
+          "warp-dex.exe",
+          "Cloudflare WARP.exe",
+          "aria2c",
+          "cifsd",
+          "i2pd",
+          "monerod",
+          "smbd",
+          "syncthing",
+          "tailscaled",
+          "tailscaled.exe",
+          "tor",
+          "tor.exe"
         ]
       },
       {

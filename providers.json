@@ -1,20 +1,20 @@
 {
   "subscribes": [
     {
-      "url": "https://crncc6it4w.zodacchub.com/link/5k7eZJZdn1TzSF1f?clash=1",
+      "url": "https://update.glados-config.com/clash/544172/409d44c/85354/glados.yaml",
       "tag": "tag_1",
       "enabled": true,
       "emoji": 1,
-      "subgroup": "",
+      "subgroup": "GLaDOS",
       "prefix": "",
       "User-Agent": "v2rayng"
     },
     {
-      "url": "URL",
+      "url": "https://12123.org/api/v1/client/subscribe?token=d896f9d86e90bbebca2c3eef99beb999",
       "tag": "tag_2",
-      "enabled": false,
-      "emoji": 0,
-      "subgroup": "命名/named",
+      "enabled": true,
+      "emoji": 1,
+      "subgroup": "JIKE FREE",
       "prefix": "❤️",
       "User-Agent": "clashmeta"
     }
