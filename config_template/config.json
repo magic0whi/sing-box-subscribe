@@ -60,14 +60,19 @@
       {
         "server": "localDNS",
         "process_name": [
+          "Cloudflare WARP.exe",
+          "i2pd",
+          "tailscaled",
+          "tailscaled.exe",
+          "tor",
+          "tor.exe",
           "warp-svc",
           "warp-svc.exe",
           "warp-taskbar",
           "warp-cli",
           "warp-cli.exe",
           "warp-dex",
-          "warp-dex.exe",
-          "Cloudflare WARP.exe"
+          "warp-dex.exe"
         ]
       },
       {
@@ -78,8 +83,7 @@
         "server": "localDNS",
         "rule_set": [
           "geosite-cn",
-          "geosite-cloudflare",
-          "geoip-cloudflare"
+          "geosite-cloudflare"
         ]
       },
       {
@@ -100,14 +104,19 @@
       "type": "tun",
       "inet4_address": "172.19.0.0/30",
       "inet6_address": "fdfe:dcba:9876::0/126",
+      "inet4_route_exclude_address": [
+        "100.64.0.0/10"
+      ],
+      "inet6_route_exclude_address": [
+        "fd7a:115c:a1e0::/48"
+      ],
       "gso": true,
       "auto_route": true,
       "strict_route": false,
       "sniff": true,
       "stack": "system",
       "exclude_interface": [
-        "docker0",
-        "tailscale0"
+        "docker0"
       ],
       "platform": {
         "http_proxy": {
@@ -526,29 +535,30 @@
       {
         "outbound": "direct",
         "process_name": [
+          "aria2c",
+          "cifsd",
+          "Cloudflare WARP.exe",
+          "i2pd",
+          "monerod",
+          "smbd",
+          "syncthing",
+          "tailscaled",
+          "tailscaled.exe",
+          "tor",
+          "tor.exe",
           "warp-svc",
           "warp-svc.exe",
           "warp-taskbar",
           "warp-cli",
           "warp-cli.exe",
           "warp-dex",
-          "warp-dex.exe",
-          "Cloudflare WARP.exe",
-          "aria2c",
-          "cifsd",
-          "i2pd",
-          "monerod",
-          "smbd",
-          "syncthing",
-          "tor",
-          "tor.exe"
+          "warp-dex.exe"
         ]
       },
       {
         "outbound": "direct",
         "rule_set": [
-          "geosite-cloudflare",
-          "geoip-cloudflare"
+          "geosite-cloudflare"
         ]
       },
       {
@@ -710,13 +720,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
-        "download_detour": "direct"
-      },
-      {
-        "tag": "geoip-cloudflare",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cloudflare.srs",
         "download_detour": "direct"
       },
       {
