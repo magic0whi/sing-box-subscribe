@@ -31,7 +31,7 @@
       },
       {
         "tag": "proxyDNS",
-        "address": "tls://8.8.8.8",
+        "address": "tls://1.0.0.1",
         "detour": "Proxy"
       },
       {
@@ -76,7 +76,11 @@
       },
       {
         "server": "localDNS",
-        "rule_set": "geosite-cn"
+        "rule_set": [
+          "geosite-cn",
+          "geosite-cloudflare",
+          "geoip-cloudflare"
+        ]
       },
       {
         "server": "proxyDNS",
@@ -103,8 +107,7 @@
       "stack": "system",
       "exclude_interface": [
         "docker0",
-        "tailscale0",
-        "yggdrasil"
+        "tailscale0"
       ],
       "platform": {
         "http_proxy": {
@@ -537,10 +540,15 @@
           "monerod",
           "smbd",
           "syncthing",
-          "tailscaled",
-          "tailscaled.exe",
           "tor",
           "tor.exe"
+        ]
+      },
+      {
+        "outbound": "direct",
+        "rule_set": [
+          "geosite-cloudflare",
+          "geoip-cloudflare"
         ]
       },
       {
@@ -702,6 +710,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geoip-cloudflare",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cloudflare.srs",
         "download_detour": "direct"
       },
       {
@@ -870,6 +885,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-cloudflare",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cloudflare.srs",
         "download_detour": "direct"
       }
     ]
