@@ -32,7 +32,7 @@
       {
         "tag": "proxyDNS",
         "address": "tls://1.0.0.1",
-        "detour": "Proxy"
+        "detour": "auto"
       },
       {
         "tag": "localDNS",
@@ -455,6 +455,7 @@
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
+        "direct",
         "{all}"
       ],
       "filter": [
