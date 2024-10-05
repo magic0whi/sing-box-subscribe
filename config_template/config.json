@@ -490,6 +490,10 @@
     "final": "Proxy",
     "rules": [
       {
+        "outbound": "direct",
+        "process_name": "named"
+      },
+      {
         "outbound": "dns-out",
         "type": "logical",
         "mode": "or",
