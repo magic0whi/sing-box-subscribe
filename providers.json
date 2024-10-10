@@ -3,7 +3,7 @@
     {
       "url": "https://update.glados-config.com/clash/544172/409d44c/85354/glados.yaml",
       "tag": "tag_1",
-      "enabled": true,
+      "enabled": false,
       "emoji": 1,
       "subgroup": "GLaDOS",
       "prefix": "",

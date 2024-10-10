@@ -60,19 +60,13 @@
       {
         "server": "localDNS",
         "process_name": [
-          "Cloudflare WARP.exe",
           "i2pd",
+          "snowflake-pt-client",
+          "snowflake-client.exe",
           "tailscaled",
           "tailscaled.exe",
           "tor",
-          "tor.exe",
-          "warp-svc",
-          "warp-svc.exe",
-          "warp-taskbar",
-          "warp-cli",
-          "warp-cli.exe",
-          "warp-dex",
-          "warp-dex.exe"
+          "tor.exe"
         ]
       },
       {
@@ -490,19 +484,33 @@
     "final": "Proxy",
     "rules": [
       {
-        "outbound": "direct",
-        "process_name": "named"
-      },
-      {
         "outbound": "dns-out",
         "type": "logical",
-        "mode": "or",
+        "mode": "and",
         "rules": [
           {
-            "port": 53
+            "invert": true,
+            "process_name": [
+              "Cloudflare WARP.exe",
+              "named",
+              "warp-taskbar",
+              "warp-svc",
+              "warp-svc.exe",
+              "warp-svc",
+              "warp-svc.exe"
+            ]
           },
           {
-            "protocol": "dns"
+            "type": "logical",
+            "mode": "or",
+            "rules": [
+              {
+                "port": 53
+              },
+              {
+                "protocol": "dns"
+              }
+            ]
           }
         ]
       },
@@ -547,7 +555,10 @@
           "Cloudflare WARP.exe",
           "i2pd",
           "monerod",
+          "named",
           "smbd",
+          "snowflake-pt-client",
+          "snowflake-client.exe",
           "syncthing",
           "tailscaled",
           "tailscaled.exe",
@@ -556,8 +567,6 @@
           "warp-svc",
           "warp-svc.exe",
           "warp-taskbar",
-          "warp-cli",
-          "warp-cli.exe",
           "warp-dex",
           "warp-dex.exe"
         ]
