@@ -32,7 +32,7 @@
       {
         "tag": "proxyDNS",
         "address": "tls://1.0.0.1",
-        "detour": "auto"
+        "detour": "Proxy"
       },
       {
         "tag": "localDNS",
@@ -554,6 +554,7 @@
           "cifsd",
           "Cloudflare WARP.exe",
           "i2pd",
+          "localsend",
           "monerod",
           "named",
           "smbd",
