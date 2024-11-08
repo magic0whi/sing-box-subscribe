@@ -96,14 +96,14 @@
   "inbounds": [
     {
       "type": "tun",
-      "inet4_address": "172.19.0.0/30",
-      "inet6_address": "fdfe:dcba:9876::0/126",
-      "inet4_route_exclude_address": [
+      "address": [
+        "172.19.0.0/30",
+        "fdfe:dcba:9876::0/126"
+      ],
+      "route_exclude_address": [
         "100.64.0.0/10",
         "172.17.0.0/12",
-        "192.168.15.0/24"
-      ],
-      "inet6_route_exclude_address": [
+        "192.168.15.0/24",
         "fd7a:115c:a1e0::/48"
       ],
       "gso": true,

@@ -10,6 +10,7 @@ env/
 venv/
 ENV/ 
 env.bak/ 
+node_modules/
 venv.bak/ 
 
 config.json
