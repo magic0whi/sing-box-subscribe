@@ -14,3 +14,4 @@ node_modules/
 venv.bak/ 
 
 config.json
+providers.json

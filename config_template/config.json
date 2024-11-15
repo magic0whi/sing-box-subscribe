@@ -31,7 +31,7 @@
       },
       {
         "tag": "proxyDNS",
-        "address": "tls://1.0.0.1",
+        "address": "tls://8.8.8.8",
         "detour": "Proxy"
       },
       {
@@ -108,6 +108,7 @@
       ],
       "gso": true,
       "auto_route": true,
+      "auto_redirect": true,
       "strict_route": false,
       "sniff": true,
       "stack": "system",
