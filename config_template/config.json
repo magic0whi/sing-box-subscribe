@@ -103,12 +103,12 @@
       "route_exclude_address": [
         "100.64.0.0/10",
         "172.17.0.0/12",
-        "192.168.15.0/24",
+        "192.168.1.0/24",
         "fd7a:115c:a1e0::/48"
       ],
-      "gso": true,
+      "gso": false,
       "auto_route": true,
-      "auto_redirect": true,
+      "auto_redirect": false,
       "strict_route": false,
       "sniff": true,
       "stack": "system",
@@ -543,10 +543,7 @@
       },
       {
         "outbound": "direct",
-        "port": [
-          22,
-          40000
-        ]
+        "port": 40000
       },
       {
         "outbound": "direct",
