@@ -61,6 +61,7 @@
         "server": "localDNS",
         "process_name": [
           "i2pd",
+          "localsend",
           "snowflake-pt-client",
           "snowflake-client.exe",
           "tailscaled",
@@ -495,8 +496,6 @@
               "Cloudflare WARP.exe",
               "named",
               "warp-taskbar",
-              "warp-svc",
-              "warp-svc.exe",
               "warp-svc",
               "warp-svc.exe"
             ]
