@@ -104,10 +104,10 @@
       "route_exclude_address": [
         "100.64.0.0/10",
         "172.17.0.0/12",
-        "192.168.1.0/24",
+        "192.168.0.0/16",
         "fd7a:115c:a1e0::/48"
       ],
-      "gso": false,
+      "gso": true,
       "auto_route": true,
       "auto_redirect": false,
       "strict_route": false,
@@ -494,7 +494,6 @@
             "invert": true,
             "process_name": [
               "Cloudflare WARP.exe",
-              "named",
               "warp-taskbar",
               "warp-svc",
               "warp-svc.exe"
@@ -553,7 +552,6 @@
           "i2pd",
           "localsend",
           "monerod",
-          "named",
           "smbd",
           "snowflake-pt-client",
           "snowflake-client.exe",
@@ -570,18 +568,24 @@
         ]
       },
       {
+        "outbound": "Taffy",
+        "process_name": "warp-svc"
+      },
+      {
+        "outbound": "🇯🇵 海外接入 日本",
+        "domain_suffix": "gradient.network"
+      },
+      {
         "outbound": "direct",
-        "rule_set": [
-          "geosite-cloudflare"
-        ]
+        "rule_set": "geosite-cloudflare"
       },
       {
         "outbound": "AdBlock",
         "rule_set": "geosite-category-ads-all"
       },
       {
-        "rule_set": "geosite-openai",
-        "outbound": "OpenAI"
+        "outbound": "OpenAI",
+        "rule_set": "geosite-openai"
       },
       {
         "rule_set": [
