@@ -497,6 +497,16 @@
       ]
     },
     {
+      "tag": "Giffgaff",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "WARP-Out",
+        "England"
+      ],
+      "default": "England"
+    },
+    {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
@@ -541,8 +551,8 @@
             "invert": true,
             "process_name": [
               "Cloudflare WARP.exe",
-              "warp-taskbar",
-              "warp-svc.exe"
+              "tailscaled",
+              "tailscaled.exe"
             ]
           },
           {
@@ -580,8 +590,11 @@
       {
         "outbound": "WARP",
         "domain_suffix": [
-          "wise.com",
-          "ifastgb.com"
+          "ifastgb.com",
+          "ip.im",
+          "ip.eeuu.cc",
+          "n26.com",
+          "wise.com"
         ]
       },
       {
@@ -621,7 +634,6 @@
           "tailscaled.exe",
           "tor",
           "tor.exe",
-          "warp-svc.exe",
           "warp-taskbar",
           "warp-dex",
           "warp-dex.exe"
@@ -631,12 +643,42 @@
         "outbound": "WARP-Out",
         "process_name": [
           "warp-svc",
-          "warp-dex"
+          "warp-svc.exe",
+          "warp-dex",
+          "warp-dex.exe"
         ]
       },
       {
-        "outbound": "🇯🇵 海外接入 日本",
+        "outbound": "Giffgaff",
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": [
+              500,
+              4500
+            ],
+            "network": "udp"
+          },
+          {
+            "port": 143,
+            "network": "tcp"
+          }
+        ]
+      },
+      {
+        "outbound": "Japan",
         "domain_suffix": "gradient.network"
+      },
+      {
+        "outbound": "HongKong",
+        "domain_suffix": [
+          "alipay.hk",
+          "hsbc.com.hk",
+          "qualtrics.com",
+          "bochk.com",
+          "za.group"
+        ]
       },
       {
         "outbound": "direct",
