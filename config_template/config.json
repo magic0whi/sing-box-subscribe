@@ -497,11 +497,11 @@
       ]
     },
     {
-      "tag": "Giffgaff",
+      "tag": "GiffGaff",
       "type": "selector",
       "outbounds": [
         "direct",
-        "WARP-Out",
+        "WARP",
         "England"
       ],
       "default": "England"
@@ -590,10 +590,12 @@
       {
         "outbound": "WARP",
         "domain_suffix": [
+          "fundsupermart.com",
           "ifastgb.com",
           "ip.im",
           "ip.eeuu.cc",
           "n26.com",
+          "paypal.com",
           "wise.com"
         ]
       },
@@ -649,7 +651,7 @@
         ]
       },
       {
-        "outbound": "Giffgaff",
+        "outbound": "GiffGaff",
         "type": "logical",
         "mode": "or",
         "rules": [
@@ -663,6 +665,9 @@
           {
             "port": 143,
             "network": "tcp"
+          },
+          {
+            "domain_suffix": "3gppnetwork.org"
           }
         ]
       },
@@ -673,10 +678,16 @@
       {
         "outbound": "HongKong",
         "domain_suffix": [
+          "airstarbank.com",
           "alipay.hk",
-          "hsbc.com.hk",
-          "qualtrics.com",
           "bochk.com",
+          "cncbinternational.com",
+          "eum-appdynamics.com",
+          "hsbc.com.hk",
+          "liveperson.net",
+          "lpsnmedia.net",
+          "qualtrics.com",
+          "tealiumiq.com",
           "za.group"
         ]
       },
