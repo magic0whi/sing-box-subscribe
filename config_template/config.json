@@ -576,6 +576,7 @@
       {
         "outbound": "Proxy",
         "domain": [
+          "dash.cloudflare.com",
           "nixos-and-flakes.thiscute.world"
         ]
       },
@@ -598,6 +599,11 @@
           "paypal.com",
           "wise.com"
         ]
+      },
+      {
+        "outbound": "direct",
+        "domain": "nic.eu.org",
+        "domain_suffix": "static.tripcdn.com"
       },
       {
         "outbound": "direct",
