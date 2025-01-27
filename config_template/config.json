@@ -140,6 +140,7 @@
       "outbounds": [
         "auto",
         "direct",
+        "Tor",
         "WARP",
         "{all}"
       ]
@@ -149,6 +150,14 @@
       "tag": "WARP",
       "server": "127.0.0.1",
       "server_port": 40000,
+      "version": "5",
+      "network": "tcp"
+    },
+    {
+      "type": "socks",
+      "tag": "Tor",
+      "server": "100.89.228.70",
+      "server_port": 9050,
       "version": "5",
       "network": "tcp"
     },
@@ -344,6 +353,20 @@
       ]
     },
     {
+      "tag": "Duolingo",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "England",
+        "Others"
+      ]
+    },
+    {
       "tag": "Global",
       "type": "selector",
       "outbounds": [
@@ -458,7 +481,7 @@
         {
           "action": "include",
           "keywords": [
-            "🇬🇧|UK|uk|英国|英|United Kingdom"
+            "🇬🇧|UK|uk|GB|gb|英国|英|United Kingdom"
           ]
         }
       ]
@@ -485,6 +508,7 @@
       "type": "selector",
       "outbounds": [
         "direct",
+        "Tor",
         "{all}"
       ],
       "filter": [
@@ -552,7 +576,9 @@
             "process_name": [
               "Cloudflare WARP.exe",
               "tailscaled",
-              "tailscaled.exe"
+              "tailscaled.exe",
+              "tor",
+              "tor.exe"
             ]
           },
           {
@@ -773,8 +799,7 @@
         "outbound": "Apple",
         "rule_set": [
           "geoip-apple",
-          "geosite-apple",
-          "geosite-amazon"
+          "geosite-apple"
         ]
       },
       {
@@ -790,6 +815,13 @@
         "rule_set": [
           "geosite-hbo",
           "geosite-primevideo"
+        ]
+      },
+      {
+        "outbound": "Duolingo",
+        "rule_set": [
+          "geosite-duolingo",
+          "geosite-amazon"
         ]
       },
       {
@@ -1035,6 +1067,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cloudflare.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-duolingo",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/duolingo.srs",
         "download_detour": "direct"
       }
     ]
