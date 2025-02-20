@@ -5,7 +5,7 @@
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "127.0.0.1:9091",
+      "external_controller": "100.73.138.118:9091",
       "external_ui": "ui",
       "secret": "",
       "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/metacubexd/archive/gh-pages.zip",
@@ -76,10 +76,7 @@
       },
       {
         "server": "localDNS",
-        "rule_set": [
-          "geosite-cn",
-          "geosite-cloudflare"
-        ]
+        "rule_set": "geosite-cn"
       },
       {
         "server": "proxyDNS",
@@ -88,6 +85,10 @@
       {
         "server": "proxyDNS",
         "rule_set": "geosite-geolocation-!cn"
+      },
+      {
+        "server": "proxyDNS",
+        "domain_suffix": "polymarket.com"
       }
     ],
     "independent_cache": false,
@@ -574,7 +575,6 @@
           {
             "invert": true,
             "process_name": [
-              "Cloudflare WARP.exe",
               "tailscaled",
               "tailscaled.exe",
               "tor",
@@ -602,7 +602,6 @@
       {
         "outbound": "Proxy",
         "domain": [
-          "dash.cloudflare.com",
           "nixos-and-flakes.thiscute.world"
         ]
       },
@@ -617,6 +616,8 @@
       {
         "outbound": "WARP",
         "domain_suffix": [
+          "akamaihd.net",
+          "creditkarma.co.uk",
           "fundsupermart.com",
           "ifastgb.com",
           "ip.im",
@@ -624,6 +625,7 @@
           "loqbox.com",
           "n26.com",
           "paypal.com",
+          "transferwise.com",
           "wise.com"
         ]
       },
@@ -657,7 +659,6 @@
         "process_name": [
           "aria2c",
           "cifsd",
-          "Cloudflare WARP.exe",
           "i2pd",
           "localsend",
           "monerod",
@@ -724,10 +725,6 @@
           "tealiumiq.com",
           "za.group"
         ]
-      },
-      {
-        "outbound": "direct",
-        "rule_set": "geosite-cloudflare"
       },
       {
         "outbound": "AdBlock",
