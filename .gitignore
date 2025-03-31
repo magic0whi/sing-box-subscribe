@@ -13,5 +13,5 @@ env.bak/
 node_modules/
 venv.bak/ 
 
-config.json
+./config.json
 providers.json
