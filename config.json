@@ -40,7 +40,8 @@
         "domain": [
           "ghproxy.com",
           "cdn.jsdelivr.net",
-          "testingcf.jsdelivr.net"
+          "testingcf.jsdelivr.net",
+          "syncthing.net"
         ]
       },
       {
@@ -61,13 +62,10 @@
       },
       {
         "server": "proxyDNS",
-        "domain_suffix": [
-          "polymarket.com",
-          "trading212.com"
-        ]
+        "domain_suffix": "trading212.com"
       }
     ],
-    "final": "proxyDNS",
+    "final": "localDNS",
     "strategy": "ipv4_only"
   },
   "inbounds": [
@@ -89,7 +87,7 @@
       "auto_route": true,
       "auto_redirect": false,
       "strict_route": false,
-      "stack": "gvisor",
+      "stack": "system",
       "exclude_interface": [
         "docker0"
       ],
@@ -125,7 +123,7 @@
       "server_port": 12324,
       "username": "14a3bd1def4eb",
       "password": "2272fe1199",
-      "udp_over_tcp": true
+      "udp_over_tcp": false
     },
     {
       "tag": "IPRoyal_DE",
@@ -135,7 +133,7 @@
       "server_port": 12324,
       "username": "14af882a89f15",
       "password": "00122500f6",
-      "udp_over_tcp": true
+      "udp_over_tcp": false
     },
     {
       "tag": "Tor",
@@ -162,7 +160,7 @@
         "Tor",
         "WARP",
         "IPRoyal",
-        "剩余流量：180.66 GB",
+        "剩余流量：133.93 GB",
         "套餐到期：长期有效",
         "🇯🇵 日本-优化",
         "🇯🇵 日本-优化2",
@@ -451,7 +449,7 @@
       ]
     },
     {
-      "tag": "GiffGaff",
+      "tag": "WIFICalling",
       "type": "selector",
       "outbounds": [
         "direct",
@@ -544,7 +542,7 @@
       "tag": "England",
       "type": "selector",
       "outbounds": [
-        "剩余流量：180.66 GB",
+        "剩余流量：133.93 GB",
         "🇬🇧 英国-优化-GPT",
         "🇬🇧 英国-优化2",
         "🇬🇧 英国-优化3",
@@ -557,7 +555,7 @@
       "outbounds": [
         "Proxy",
         "direct",
-        "剩余流量：180.66 GB",
+        "剩余流量：133.93 GB",
         "套餐到期：长期有效",
         "🇰🇭 柬埔寨KH-T",
         "🇻🇳 越南VN-T",
@@ -697,7 +695,7 @@
       "tag": "direct"
     },
     {
-      "tag": "剩余流量：180.66 GB",
+      "tag": "剩余流量：133.93 GB",
       "type": "vmess",
       "server": "yes.mojcn.com",
       "server_port": 16617,
@@ -1439,11 +1437,11 @@
     "final": "Proxy",
     "rules": [
       {
+        "action": "sniff",
         "inbound": [
           "tun-in",
           "mixed-in"
-        ],
-        "action": "sniff"
+        ]
       },
       {
         "action": "hijack-dns",
@@ -1517,8 +1515,7 @@
           "segment.io",
           "trading212.com",
           "transferwise.com",
-          "wise.com",
-          "gradient.network"
+          "wise.com"
         ]
       },
       {
@@ -1526,7 +1523,8 @@
         "domain": "nic.eu.org",
         "domain_suffix": [
           "static.tripcdn.com",
-          "us.hsbc.com"
+          "us.hsbc.com",
+          "syncthing.net"
         ]
       },
       {
@@ -1573,6 +1571,13 @@
       },
       {
         "outbound": "WARP-Out",
+        "ip_cidr": [
+          "185.248.3.11/32",
+          "91.228.142.61/32"
+        ]
+      },
+      {
+        "outbound": "WARP-Out",
         "process_name": [
           "warp-svc",
           "warp-svc.exe",
@@ -1581,7 +1586,7 @@
         ]
       },
       {
-        "outbound": "GiffGaff",
+        "outbound": "WIFICalling",
         "type": "logical",
         "mode": "or",
         "rules": [
@@ -1602,7 +1607,11 @@
         ]
       },
       {
-        "outbound": "WARP",
+        "outbound": "IPRoyal",
+        "domain_suffix": "gradient.network"
+      },
+      {
+        "outbound": "HongKong",
         "domain_suffix": [
           "airstarbank.com",
           "alipay.hk",
